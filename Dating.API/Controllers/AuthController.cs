@@ -38,7 +38,6 @@ namespace Dating.API.Controllers
         }
 
         [HttpPost("login")]
-
         public async Task<IActionResult> Register(UserForLoginDto userForLoginDto)
         {
             var userFromRepo=await _repo.Login(userForLoginDto.Username.ToLower(),userForLoginDto.Password);
